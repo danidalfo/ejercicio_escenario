@@ -1,17 +1,30 @@
 package EscenariInicial;
 
+import java.util.Vector;
+
 public class Usuario {
 
     private String nombre;
     private String email;
+    Vector<Objeto> objetos;
 
     public Usuario(String nombre, String email) {
         this.nombre = nombre;
+        objetos = new Vector<Objeto>();
         this.email = email;
     }
 
     public Usuario(String nombre) {
         this.nombre = nombre;
+        objetos = new Vector<Objeto>();
+    }
+
+    public Vector<Objeto> getObjetos() {
+        return objetos;
+    }
+
+    public void setObjetos(Vector<Objeto> objetos) {
+        this.objetos = objetos;
     }
 
     public String getNombre() {
@@ -28,5 +41,15 @@ public class Usuario {
 
     public void setEmail(String email) {
         this.email = email;
+    }
+
+    public boolean addObjeto(Objeto o)
+    {
+        if(o!=null)
+        {
+            objetos.add(o);
+            return true;
+        }
+        return false;
     }
 }
