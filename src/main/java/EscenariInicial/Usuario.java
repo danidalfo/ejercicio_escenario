@@ -4,6 +4,7 @@ import java.util.Vector;
 
 public class Usuario {
 
+    private int id;
     private String nombre;
     private String email;
     Vector<Objeto> objetos;
@@ -17,6 +18,14 @@ public class Usuario {
     public Usuario(String nombre) {
         this.nombre = nombre;
         objetos = new Vector<Objeto>();
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
     }
 
     public Vector<Objeto> getObjetos() {

@@ -22,6 +22,11 @@ public class Mundo {
         return mon;
     }
 
+    public Usuario getUsuario(String nombre) {
+
+        return usuarios.get(nombre);
+    }
+
     public boolean addUsuario(Usuario usuario) {
         if(usuario==null) {
             logger.error("addUsuario: usuario vacio");
